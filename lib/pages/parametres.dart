@@ -21,7 +21,7 @@ class _ParametresPageState extends State<ParametresPage> {
     return Scaffold(
         drawer: MyDrawer(),
         appBar: AppBar(
-          title: Text('Parametres'),
+          title: const Text('Parametres'),
         ),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.start,
@@ -59,14 +59,14 @@ class _ParametresPageState extends State<ParametresPage> {
               ],
             ),
             Container(
-              padding: EdgeInsets.all(10),
+              padding: const EdgeInsets.all(10),
               child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
                       minimumSize: const Size.fromHeight(50)),
                   onPressed: () {
                     _onSaveMode();
                   },
-                  child: Text('Enregistrer', style: TextStyle(fontSize: 22))),
+                  child: const Text('Enregistrer', style: TextStyle(fontSize: 22))),
             ),
           ],
         ));

@@ -23,7 +23,7 @@ class AuthentificationPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Authentification'),
+        title: const Text('Authentification'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -33,26 +33,26 @@ class AuthentificationPage extends StatelessWidget {
             TextFormField(
               controller: txt_login,
               decoration: InputDecoration(
-                prefixIcon: Icon(Icons.person),
+                prefixIcon: const Icon(Icons.person),
                 hintText: "Utilisateur",
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(10),
                 ),
               ),
             ),
-            SizedBox(height: 16.0), // Espace entre les champs de texte
+            const SizedBox(height: 16.0), // Espace entre les champs de texte
             TextFormField(
               controller: txt_password,
               obscureText: true, // Pour masquer le texte du mot de passe
               decoration: InputDecoration(
-                prefixIcon: Icon(Icons.lock),
+                prefixIcon: const Icon(Icons.lock),
                 hintText: "Mot de passe",
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(10),
                 ),
               ),
             ),
-            SizedBox(height: 16.0), // Espace entre les champs de texte
+            const SizedBox(height: 16.0), // Espace entre les champs de texte
             ElevatedButton(
               onPressed: () {
                 // Ajoutez ici la logique pour gérer la connexion
@@ -61,14 +61,14 @@ class AuthentificationPage extends StatelessWidget {
                 // Faites quelque chose avec les données de connexion
                 _onAuthentifier(context);
               },
-              child: Text('Connexion', style: TextStyle(fontSize: 22)),
+              child: const Text('Connexion', style: TextStyle(fontSize: 22)),
               style: ElevatedButton.styleFrom(
                 minimumSize: const Size.fromHeight(50),
               ),
             ),
             TextButton(
                 child:
-                    Text("Nouvel Utilisateur", style: TextStyle(fontSize: 22)),
+                    const Text("Nouvel Utilisateur", style: TextStyle(fontSize: 22)),
                 onPressed: () {
                   Navigator.pop(context);
                   Navigator.pushNamed(context, '/inscription');
@@ -88,13 +88,13 @@ class AuthentificationPage extends StatelessWidget {
         Navigator.pop(context);
         Navigator.pushNamed(context, '/home');
       } on FirebaseAuthException catch (e) {
-        SnackBar snackBar = SnackBar(content: Text(""));
+        SnackBar snackBar = const SnackBar(content: Text(""));
         if (e.code == 'user-not-found') {
-          snackBar = SnackBar(
+          snackBar = const SnackBar(
             content: Text('Utilisateur inexistant'),
           );
         } else if (e.code == 'wrong-password') {
-          snackBar = SnackBar(
+          snackBar = const SnackBar(
             content: Text('Verifier votre mot de passe'),
           );
         }

@@ -14,7 +14,7 @@ class MyDrawer extends StatelessWidget {
     return Drawer(
       child: ListView(
         children: [
-          DrawerHeader(
+          const DrawerHeader(
             decoration: BoxDecoration(
               gradient: LinearGradient(colors: [Colors.white, Colors.blue]),
             ),
@@ -30,9 +30,9 @@ class MyDrawer extends StatelessWidget {
               children: [
                 ListTile(
                   title: Text(item['title'] as String,
-                      style: TextStyle(fontSize: 22)),
+                      style: const TextStyle(fontSize: 22)),
                   leading: item['icon'] as Icon,
-                  trailing: Icon(Icons.arrow_right, color: Colors.blue),
+                  trailing: const Icon(Icons.arrow_right, color: Colors.blue),
                   onTap: () async {
                     if (item['title'] != "Déconnexion") {
                       Navigator.pop(context);
@@ -44,7 +44,7 @@ class MyDrawer extends StatelessWidget {
                     }
                   },
                 ),
-                Divider(height: 4, color: Colors.blue),
+                const Divider(height: 4, color: Colors.blue),
               ],
             );
           })),

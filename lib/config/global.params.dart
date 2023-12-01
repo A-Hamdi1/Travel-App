@@ -6,73 +6,73 @@ class GlobalParams {
   static List<Map<String, dynamic>> menus = [
     {
       "title": "Accueil",
-      "icon": Icon(Icons.home, color: Colors.blue),
+      "icon": const Icon(Icons.home, color: Colors.blue),
       "route": "/home"
     },
     {
       "title": "Météo",
-      "icon": Icon(Icons.sunny_snowing, color: Colors.blue),
+      "icon": const Icon(Icons.sunny_snowing, color: Colors.blue),
       "route": "/meteo"
     },
     {
       "title": "Gallerie",
-      "icon": Icon(Icons.photo, color: Colors.blue),
+      "icon": const Icon(Icons.photo, color: Colors.blue),
       "route": "/gallerie"
     },
     {
       "title": "Pays",
-      "icon": Icon(Icons.location_city, color: Colors.blue),
+      "icon": const Icon(Icons.location_city, color: Colors.blue),
       "route": "/pays"
     },
     {
       "title": "Contact",
-      "icon": Icon(Icons.contact_page, color: Colors.blue),
+      "icon": const Icon(Icons.contact_page, color: Colors.blue),
       "route": "/contact"
     },
     {
       "title": "Paramètres",
-      "icon": Icon(Icons.settings, color: Colors.blue),
+      "icon": const Icon(Icons.settings, color: Colors.blue),
       "route": "/parametres"
     },
     {
       "title": "Déconnexion",
-      "icon": Icon(Icons.logout, color: Colors.blue),
+      "icon": const Icon(Icons.logout, color: Colors.blue),
       "route": "/authentification"
     },
   ];
   static List<Map<String, dynamic>> accueil = [
     {
-      "image": AssetImage(
+      "image": const AssetImage(
         'images/meteo.png',
       ),
       "route": "/meteo"
     },
     {
-      "image": AssetImage(
+      "image": const AssetImage(
         'images/gallerie.png',
       ),
       "route": "/gallerie"
     },
     {
-      "image": AssetImage(
+      "image": const AssetImage(
         'images/pays.png',
       ),
       "route": "/pays"
     },
     {
-      "image": AssetImage(
+      "image": const AssetImage(
         'images/contact.png',
       ),
       "route": "/contact"
     },
     {
-      "image": AssetImage(
+      "image": const AssetImage(
         'images/parametres.png',
       ),
       "route": "/parametres"
     },
     {
-      "image": AssetImage(
+      "image": const AssetImage(
         'images/deconnexion.png',
       ),
       "route": "/authentification"

@@ -23,7 +23,7 @@ class InscriptionPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Inscription'),
+        title: const Text('Inscription'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -33,26 +33,26 @@ class InscriptionPage extends StatelessWidget {
             TextFormField(
               controller: txt_login,
               decoration: InputDecoration(
-                prefixIcon: Icon(Icons.person),
+                prefixIcon: const Icon(Icons.person),
                 hintText: "Utilisateur",
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(10),
                 ),
               ),
             ),
-            SizedBox(height: 16.0), // Espace entre les champs de texte
+            const SizedBox(height: 16.0), // Espace entre les champs de texte
             TextFormField(
               controller: txt_password,
               obscureText: true, // Pour masquer le texte du mot de passe
               decoration: InputDecoration(
-                prefixIcon: Icon(Icons.lock),
+                prefixIcon: const Icon(Icons.lock),
                 hintText: "Mot de passe",
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(10),
                 ),
               ),
             ),
-            SizedBox(height: 16.0), // Espace entre les champs de texte
+            const SizedBox(height: 16.0), // Espace entre les champs de texte
             ElevatedButton(
               onPressed: () {
                 // Ajoutez ici la logique pour gérer l'inscription
@@ -61,14 +61,14 @@ class InscriptionPage extends StatelessWidget {
                 // Faites quelque chose avec les données d'inscription
                 _onInscrire(context);
               },
-              child: Text('Inscription', style: TextStyle(fontSize: 22)),
+              child: const Text('Inscription', style: TextStyle(fontSize: 22)),
               style: ElevatedButton.styleFrom(
                 minimumSize: const Size.fromHeight(50),
               ),
             ),
             TextButton(
                 child:
-                Text("J'ai déjà un compte", style: TextStyle(fontSize: 22)),
+                const Text("J'ai déjà un compte", style: TextStyle(fontSize: 22)),
                 onPressed: () {
                   Navigator.pop(context);
                   Navigator.pushNamed(context, '/authentification');
@@ -88,13 +88,13 @@ class InscriptionPage extends StatelessWidget {
         Navigator.pop(context);
         Navigator.pushNamed(context, '/home');
       } on FirebaseAuthException catch (e) {
-        SnackBar snackBar = SnackBar(content: Text(""));
+        SnackBar snackBar = const SnackBar(content: Text(""));
         if (e.code == 'weak-password') {
-          snackBar = SnackBar(
+          snackBar = const SnackBar(
             content: Text('Mot de passe faible'),
           );
         } else if (e.code == 'email-already-in-use') {
-          snackBar = SnackBar(
+          snackBar = const SnackBar(
             content: Text('Email déjà existant'),
           );
         }

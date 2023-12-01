@@ -21,7 +21,7 @@ class PaysPage extends StatelessWidget {
             TextFormField(
               controller: txt_pays,
               decoration: InputDecoration(
-                prefixIcon: Icon(FontAwesomeIcons.mapLocation,
+                prefixIcon: const Icon(FontAwesomeIcons.mapLocation,
                     size: 30, color: Colors.blue),
                 hintText: "Keyword",
                 border: OutlineInputBorder(
@@ -29,13 +29,13 @@ class PaysPage extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 16.0),
+            const SizedBox(height: 16.0),
             ElevatedButton(
               onPressed: () {
                 String keyword = txt_pays.text;
                 _onGetPaysDetails(context, keyword);
               },
-              child: Text('Chercher', style: TextStyle(fontSize: 22)),
+              child: const Text('Chercher', style: TextStyle(fontSize: 22)),
               style: ElevatedButton.styleFrom(
                 minimumSize: const Size.fromHeight(50),
               ),

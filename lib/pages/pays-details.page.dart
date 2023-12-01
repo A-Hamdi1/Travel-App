@@ -15,6 +15,7 @@ class _PaysDetailsPageState extends State<PaysDetailsPage> {
   bool isLoading = true;
   var paysData;
 
+  @override
   void initState() {
     super.initState();
     getPaysData(widget.ville);
@@ -36,10 +37,10 @@ class _PaysDetailsPageState extends State<PaysDetailsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Page Pays-Details'),
+        title: const Text('Page Pays-Details'),
       ),
       body: isLoading
-          ? Center(child: CircularProgressIndicator())
+          ? const Center(child: CircularProgressIndicator())
           : Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -50,18 +51,18 @@ class _PaysDetailsPageState extends State<PaysDetailsPage> {
               width: 800,
             ),
           ),
-          SizedBox(height: 40),
+          const SizedBox(height: 40),
           Text(
             '${widget.ville}\n${paysData[0]['nativeName']}',
-            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+            style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
           ),
 
 
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
+              const Text(
                 'Administaration',
                 style: TextStyle(color: Colors.lightBlue, fontWeight: FontWeight.bold, fontSize: 20),
               ),
@@ -70,16 +71,16 @@ class _PaysDetailsPageState extends State<PaysDetailsPage> {
                 'Language(s) :',
                 '${paysData[0]['languages'][0]['name']} , ${paysData[0]['languages'][0]['nativeName']}',
               ),
-              SizedBox(height: 20),
-              Text(
+              const SizedBox(height: 20),
+              const Text(
                 'Géographie',
                 style: TextStyle(color: Colors.lightBlue, fontWeight: FontWeight.bold, fontSize: 20),
               ),
               buildInfo('Région :', paysData[0]['region']),
               buildInfo('Superficie :', paysData[0]['area'].toString()),
               buildInfo('Fuseau Horaire :', paysData[0]['timezones'][0]),
-              SizedBox(height: 20),
-              Text(
+              const SizedBox(height: 20),
+              const Text(
                 'Démographie',
                 style: TextStyle(color: Colors.lightBlue, fontWeight: FontWeight.bold, fontSize: 20),
               ),
@@ -94,8 +95,8 @@ class _PaysDetailsPageState extends State<PaysDetailsPage> {
   Widget buildInfo(String s, String v) {
     return Row(
       children: [
-        Text(s, style: TextStyle(fontWeight: FontWeight.bold)),
-        SizedBox(width: 20, height: 30),
+        Text(s, style: const TextStyle(fontWeight: FontWeight.bold)),
+        const SizedBox(width: 20, height: 30),
         Text(v),
       ],
     );

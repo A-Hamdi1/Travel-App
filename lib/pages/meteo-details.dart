@@ -42,7 +42,7 @@ class _MeteoDetailsPageState extends State<MeteoDetailsPage> {
         title: Text('Page Meteo Details ${widget.ville}'),
       ),
       body: meteoData == null
-          ? Center(
+          ? const Center(
               child: CircularProgressIndicator(),
             )
           : ListView.builder(
@@ -51,7 +51,7 @@ class _MeteoDetailsPageState extends State<MeteoDetailsPage> {
                 return Card(
                   color: Colors.transparent,
                   child: Container(
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       gradient: LinearGradient(
                         colors: [Colors.blue, Colors.grey, Colors.white],
                         begin: Alignment.centerLeft,
@@ -77,7 +77,7 @@ class _MeteoDetailsPageState extends State<MeteoDetailsPage> {
                                   children: [
                                     Text(
                                       " ${DateFormat('E - dd/MM/yyyy').format(DateTime.fromMicrosecondsSinceEpoch(meteoData['list'][index]['dt'] * 1000000))}",
-                                      style: TextStyle(
+                                      style: const TextStyle(
                                           fontSize: 22,
                                           fontWeight: FontWeight.bold),
                                     ),
@@ -85,13 +85,13 @@ class _MeteoDetailsPageState extends State<MeteoDetailsPage> {
                                       children: [
                                         Text(
                                           " ${DateFormat('HH:mm').format(DateTime.fromMicrosecondsSinceEpoch(meteoData['list'][index]['dt'] * 1000000))}",
-                                          style: TextStyle(
+                                          style: const TextStyle(
                                               fontSize: 22,
                                               fontWeight: FontWeight.bold),
                                         ),
                                         Text(
                                           " |  ${meteoData['list'][index]['weather'][0]['description']}",
-                                          style: TextStyle(
+                                          style: const TextStyle(
                                               fontSize: 22,
                                               fontWeight: FontWeight.bold),
                                         ),
@@ -102,10 +102,10 @@ class _MeteoDetailsPageState extends State<MeteoDetailsPage> {
                               )
                             ],
                           ),
-                          SizedBox(width: 8.0),
+                          const SizedBox(width: 8.0),
                           Text(
                             " ${(meteoData['list'][index]['main']['temp'] - 273.15).toStringAsFixed(0)} °C",
-                            style: TextStyle(
+                            style: const TextStyle(
                                 fontSize: 22, fontWeight: FontWeight.bold),
                           ),
                         ],

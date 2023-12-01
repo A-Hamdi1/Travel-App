@@ -14,15 +14,15 @@ class HomePage extends StatelessWidget {
       drawer: MyDrawer(),
       appBar: AppBar(
         backgroundColor: Colors.blue,
-        title: Text('Page Home'),
+        title: const Text('Page Home'),
       ),
       body: Column(
         children: [
           Container(
-            padding: EdgeInsets.all(10),
+            padding: const EdgeInsets.all(10),
             child: Text(
               "Utilisateur : ${user?.email}",
-              style: TextStyle(fontSize: 22),
+              style: const TextStyle(fontSize: 22),
             ),
           ),
           Center(

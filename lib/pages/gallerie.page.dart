@@ -21,7 +21,7 @@ class GalleriePage extends StatelessWidget {
             TextFormField(
               controller: txt_gallerie, // Added this line
               decoration: InputDecoration(
-                prefixIcon: Icon(MaterialCommunityIcons.image_multiple,
+                prefixIcon: const Icon(MaterialCommunityIcons.image_multiple,
                     size: 30, color: Colors.blue),
                 hintText: "Keyword",
                 border: OutlineInputBorder(
@@ -29,13 +29,13 @@ class GalleriePage extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 16.0),
+            const SizedBox(height: 16.0),
             ElevatedButton(
               onPressed: () {
                 String keyword = txt_gallerie.text;
                 _onGetGallerieDetails(context);
               },
-              child: Text('Chercher', style: TextStyle(fontSize: 22)),
+              child: const Text('Chercher', style: TextStyle(fontSize: 22)),
               style: ElevatedButton.styleFrom(
                 minimumSize: const Size.fromHeight(50),
               ),

@@ -19,12 +19,12 @@ class _ContactPageState extends State<ContactPage> {
     return Scaffold(
       drawer: MyDrawer(),
       appBar: AppBar(
-        title: Text("Contacts"),
+        title: const Text("Contacts"),
       ),
       body: Center(
         child: Column(
           children: [
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             Align(
               alignment: Alignment.centerRight,
               child: FormHelper.submitButton(
@@ -41,7 +41,7 @@ class _ContactPageState extends State<ContactPage> {
                 btnColor: Colors.blue,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             _fetchData(),
@@ -58,11 +58,11 @@ class _ContactPageState extends State<ContactPage> {
         if (contacts.hasData) {
           return _buildDataTable(contacts.data!);
         } else if (contacts.hasError) {
-          return Center(
+          return const Center(
             child: Text("Error fetching contacts"),
           );
         }
-        return Center(
+        return const Center(
           child: CircularProgressIndicator(),
         );
       },

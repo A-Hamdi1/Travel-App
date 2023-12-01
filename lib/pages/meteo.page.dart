@@ -8,7 +8,7 @@ class MeteoPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Page meteo'),
+        title: const Text('Page meteo'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -18,7 +18,7 @@ class MeteoPage extends StatelessWidget {
             TextFormField(
               controller: txt_ville,
               decoration: InputDecoration(
-                prefixIcon: Icon(Icons.location_city),
+                prefixIcon: const Icon(Icons.location_city),
                 hintText: "Ville",
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(10),
@@ -26,13 +26,13 @@ class MeteoPage extends StatelessWidget {
               ),
             ),
 
-            SizedBox(height: 16.0),
+            const SizedBox(height: 16.0),
             ElevatedButton(
               onPressed: () {
                 String username = txt_ville.text;
                 _onGetMeteoDetails(context);
               },
-              child: Text('Chercher', style: TextStyle(fontSize: 22)),
+              child: const Text('Chercher', style: TextStyle(fontSize: 22)),
               style: ElevatedButton.styleFrom(
                 minimumSize: const Size.fromHeight(50),
               ),
